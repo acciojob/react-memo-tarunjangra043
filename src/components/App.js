@@ -17,7 +17,9 @@ function App() {
       <div>
         <h2>My todos</h2>
         {todos.map((todo, index) => (
-          <p key={index}>{todo}</p>
+          <p id={`todo-${index}`} key={index}>
+            {todo}
+          </p>
         ))}
         <button id="add-todo-btn" onClick={addTodo}>
           Add Todo
