@@ -4,7 +4,7 @@ import ReactMemoComponent from "./ReactMemo";
 
 function App() {
   const [todos, setTodos] = useState(["New Todo"]);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const addTodo = () => {
     setTodos([...todos, "New Todo"]);
