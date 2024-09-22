@@ -31,7 +31,7 @@ function App() {
           Count: <span id="counter">{count}</span>
         </h2>
         <button id="incr-cnt" onClick={() => setCount(count + 1)}>
-          Increment
+          0
         </button>
       </div>
 
