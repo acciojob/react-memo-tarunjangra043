@@ -11,10 +11,18 @@ function UseMemoComponent() {
 
   const calculation = useMemo(() => expensiveCalculation(number), [number]);
 
+  const increment = () => {
+    setNumber(number + 100000000);
+  };
+
   return (
     <div>
       <h2>Expensive Calculation</h2>
       <p id="calc">{calculation}</p>
+
+      <button id="incr-cnt" onClick={increment}>
+        Increment
+      </button>
     </div>
   );
 }
