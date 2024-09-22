@@ -12,7 +12,7 @@ function UseMemoComponent() {
   const calculation = useMemo(() => expensiveCalculation(number), [number]);
 
   const increment = () => {
-    setNumber(number + 100000000);
+    setNumber(number + 1000000000);
   };
 
   return (
