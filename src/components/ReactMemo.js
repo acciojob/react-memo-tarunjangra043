@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 
 const ReactMemoComponent = React.memo(() => {
-  const [skills, setSkills] = useState(["HTML", "CSS", "JavaScript", "React"]);
+  const [skills, setSkills] = useState([
+    "jumbotron",
+    "CSS",
+    "JavaScript",
+    "React",
+  ]);
   const [input, setInput] = useState("");
 
   const addSkill = () => {
