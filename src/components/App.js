@@ -4,7 +4,7 @@ import ReactMemoComponent from "./ReactMemo";
 
 function App() {
   const [todos, setTodos] = useState(["New Todo"]);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
 
   const addTodo = () => {
     setTodos([...todos, "New Todo"]);
@@ -31,7 +31,7 @@ function App() {
           Count: <span id="counter">{count}</span>
         </h2>
         <button id="incr-cnt" onClick={() => setCount(count + 1)}>
-          1
+          Increment
         </button>
       </div>
 
