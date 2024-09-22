@@ -27,7 +27,9 @@ function App() {
       </div>
 
       <div>
-        <h2>Count: {count}</h2>
+        <h2>
+          Count: <span id="counter">{count}</span>
+        </h2>
         <button id="incr-cnt" onClick={() => setCount(count + 1)}>
           +
         </button>

@@ -23,9 +23,12 @@ const ReactMemoComponent = React.memo(() => {
       <button id="skill-btn" onClick={addSkill}>
         Add Skill
       </button>
+
       <ul>
         {skills.map((skill, index) => (
-          <li key={index}>{skill}</li>
+          <li id={`item-jumbotron-${index}`} key={index}>
+            {skill}
+          </li>
         ))}
       </ul>
     </div>
