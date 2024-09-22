@@ -14,7 +14,7 @@ function UseMemoComponent() {
   return (
     <div>
       <h2>Expensive Calculation</h2>
-      <p>{calculation}</p>
+      <p id="calc">{calculation}</p>
     </div>
   );
 }
