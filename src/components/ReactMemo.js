@@ -20,7 +20,7 @@ const ReactMemoComponent = React.memo(() => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button id="add-skill-btn" onClick={addSkill}>
+      <button id="skill-btn" onClick={addSkill}>
         Add Skill
       </button>
       <ul>
