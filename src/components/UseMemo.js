@@ -20,7 +20,7 @@ function UseMemoComponent() {
       <h2>Expensive Calculation</h2>
       <p id="calc">{calculation}</p>
 
-      <button id="incr-cnt" onClick={increment}>
+      <button id="incr-btn" onClick={increment}>
         Increment
       </button>
     </div>
