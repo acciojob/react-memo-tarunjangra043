@@ -26,7 +26,7 @@ const ReactMemoComponent = React.memo(() => {
 
       <ul>
         {skills.map((skill, index) => (
-          <li id={`item-jumbotron-${index}`} key={index}>
+          <li id="item-jumbotron" key={index}>
             {skill}
           </li>
         ))}
