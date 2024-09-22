@@ -26,7 +26,7 @@ function App() {
         </button>
       </div>
 
-      <div>
+      <div id="#calc">
         <h2>
           Count: <span id="counter">{count}</span>
         </h2>
