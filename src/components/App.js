@@ -1,44 +1,62 @@
 import React, { useState } from "react";
-import UseMemoComponent from "./UseMemo";
-import ReactMemoComponent from "./ReactMemo";
+import UseMemo from "./UseMemo";
+import ReactMemo from "./ReactMemo";
 
-function App() {
-  const [todos, setTodos] = useState(["New Todo"]);
-  const [count, setCount] = useState(0);
+const App = () => {
+  const [todos, setTodos] = useState([]);
+  const [counter, setCounter] = useState(0);
+  const [customTask, setCustomTask] = useState("");
 
   const addTodo = () => {
-    setTodos([...todos, "New Todo"]);
+    setTodos([...todos, "New todo"]);
+  };
+
+  const incrementCounter = () => {
+    setCounter(counter + 1);
+  };
+
+  const handleCustomTaskChange = (e) => {
+    setCustomTask(e.target.value);
+  };
+
+  const submitCustomTask = () => {
+    if (customTask.length > 5) {
+      setTodos([...todos, customTask]);
+      setCustomTask("");
+    } else {
+      alert("Task must be more than 5 characters!");
+    }
   };
 
   return (
-    <div id="main">
-      <h1>React.useMemo</h1>
-
+    <div>
+      <h1>Todo List</h1>
+      <button onClick={addTodo}>Add Todo</button>
+      <button onClick={incrementCounter}>Increment Counter</button>
       <div>
-        <h2>My todos</h2>
-        {todos.map((todo, index) => (
-          <p id={`todo-${index}`} key={index}>
-            {todo}
-          </p>
-        ))}
-        <button id="add-todo-btn" onClick={addTodo}>
-          Add Todo
-        </button>
+        <input
+          type="text"
+          value={customTask}
+          onChange={handleCustomTaskChange}
+          placeholder="Enter custom task (more than 5 characters)"
+        />
+        <button onClick={submitCustomTask}>Submit</button>
       </div>
-
       <div>
-        <h2>
-          Count: <span id="counter">{count}</span>
-        </h2>
-        <button id="incr-cnt" onClick={() => setCount(count + 1)}>
-          0
-        </button>
+        <h2>Todos:</h2>
+        <ul>
+          {todos.map((todo, index) => (
+            <li key={index}>{todo}</li>
+          ))}
+        </ul>
       </div>
-
-      <UseMemoComponent />
-      <ReactMemoComponent />
+      <div>
+        <h2>Counter: {counter}</h2>
+      </div>
+      <UseMemo todos={todos} />
+      <ReactMemo />
     </div>
   );
-}
+};
 
 export default App;
